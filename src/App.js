@@ -197,13 +197,24 @@ function App() {
     setEmployees([...employees, employee])
   }
 
+  const handleDeleteEmployee = () => {
+    console.log('deletado')
+  }
+
   return (
     <div className="App">
       <Banner />
       <Formulario squad={teams.map(squad => squad.name)} handleResgisteredEmployee={employee => handleNewEmployee(employee)} />
       <section className="times">
         <h1>Minha organização</h1>
-        {teams.map((team, index) => <Time key={index} time={team} employees={employees.filter(employee => employee.time === team.name)} />)}
+        {teams.map((team, index) => 
+          <Time 
+            key={index} 
+            time={team} 
+            employees={employees.filter(employee => employee.time === team.name)} 
+            handleDeleteEmployee={handleDeleteEmployee}
+          />
+        )}
       </section>
       <Rodape />
     </div>
