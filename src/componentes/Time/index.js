@@ -2,7 +2,6 @@ import Colaborador from '../Colaborador';
 import './team.css'; 
 
 const Time = (props) => {
-    console.log('props time', props)
     return (
         (props.employees.length > 0) &&
         <section className='time' style={{backgroundColor: props.secondaryColor}}>
