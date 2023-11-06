@@ -5,7 +5,6 @@ import ListaSuspensa from '../ListaSuspensa/ListaSuspensa'
 import './Formulario.css'
 
 const Formulario = (props) => {
-
     const [name, setName] = useState(''); 
     const [role, setRole] = useState('');
     const [image, setImage] = useState(''); 

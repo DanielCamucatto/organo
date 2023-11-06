@@ -3,6 +3,7 @@
 }
 
 .colaborador .cabecalho {
+    background-color:  #F0F0F0;
     border-radius: 10px 10px 0px 0px;
 }
 .colaborador img {
@@ -18,6 +19,7 @@
     border-radius: 0px 0px 10px 10px;
     padding-top: 90px;
     padding-bottom: 40px;
+    height: 12vh;
 }
 
 .colaborador .rodape h4 {

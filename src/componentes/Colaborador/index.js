@@ -1,6 +1,7 @@
 import './colaborador.css'; 
 
 const Colaborador = ({image,name, role, mainColor}) => {
+    console.log('colaborador',name)
     return(
         <div className='colaborador'>
             <div className='cabecalho' style={{backgroundColor: mainColor}}>
