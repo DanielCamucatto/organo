@@ -5,7 +5,7 @@ import Time from './componentes/Time';
 import Rodape from './componentes/Rodape';
 
 function App() {
-  const teams = [
+  const [teams, setTeams] = useState([
     {
       name: 'Programação',
       mainColor: '#57C278',
@@ -41,7 +41,7 @@ function App() {
       mainColor: '#FF8A29',
       secondaryColor: '#FFEEDF',
     },
-  ];
+  ]);
 
   const inicial = [
     {
@@ -201,6 +201,15 @@ function App() {
     console.log('deletado')
   }
 
+  const handleChangeColorTeams = (color, name) => {
+    setTeams(teams.map(time => {
+      if(time.name === name){
+        time.mainColor = color
+      }
+      return time
+    }))
+  }
+
   return (
     <div className="App">
       <Banner />
@@ -209,6 +218,7 @@ function App() {
         <h1>Minha organização</h1>
         {teams.map((team, index) => 
           <Time 
+            changeColor={handleChangeColorTeams}
             key={index} 
             time={team} 
             employees={employees.filter(employee => employee.time === team.name)} 
