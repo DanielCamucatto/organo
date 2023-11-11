@@ -11,12 +11,12 @@ const Time = ({time, employees, handleDeleteEmployee, changeColor}) => {
             <div className='colaboradores'>
                 {employees.map((colaborador, index) => 
                     <Colaborador 
-                        key={index} 
+                        key={index}
                         name={colaborador.nome} 
                         role={colaborador.cargo} 
                         image={colaborador.imagem} 
                         mainColor={time.color} 
-                        handleDeleteEmployee={handleDeleteEmployee} 
+                        handleDeleteEmployee={() => handleDeleteEmployee(colaborador)} 
                     />
                 )}
             </div>  
