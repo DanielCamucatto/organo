@@ -229,8 +229,10 @@ function App() {
     setEmployees([...employees, employee])
   }
 
-  const handleDeleteEmployee = () => {
-    console.log('deletado')
+  const handleDeleteEmployee = (employeeToDelete) => {
+    const updateEmployees = employees.filter(employee => employee.id !== employeeToDelete.id )
+    setEmployees(updateEmployees)
+    console.log('deletado', employeeToDelete);
   }
 
   const handleChangeColorTeams = (color, id) => {
