@@ -4,20 +4,24 @@ import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa/ListaSuspensa'
 import './Formulario.css'
 
-const Formulario = (props) => {
-    const [name, setName] = useState(''); 
-    const [role, setRole] = useState('');
-    const [image, setImage] = useState(''); 
-    const [team, setTeam] = useState('');
+const Formulario = (form) => {
+
+    const [nome, setName] = useState(''); 
+    const [cargo, setRole] = useState('');
+    const [imagem, setImage] = useState(''); 
+    const [time, setTeam] = useState('');
+    const [timeName, setTimeName] = useState(''); 
+    const [timeColor, setTimeColor] = useState('');
 
     const handleSubmit = (ev) => {
         ev.preventDefault();
-        props.handleResgisteredEmployee({
-            name, 
-            role, 
-            image, 
-            team
-        })
+        form.handleResgisteredEmployee({
+            nome, 
+            cargo,
+            imagem, 
+            time
+        }); 
+
 
         setImage('');
         setName(''); 
@@ -25,6 +29,13 @@ const Formulario = (props) => {
         setTeam('');
     }
 
+    const registerNewTeam = (ev) => {
+        ev.preventDefault()
+        form.handleResgisterNewTeams({name: timeName, color:timeColor});
+
+        setTimeName(''); 
+        setTimeColor('');
+    }
 
 
     return (
@@ -34,32 +45,52 @@ const Formulario = (props) => {
                 <CampoTexto 
                     label="Nome" 
                     placeholder="Digite seu nome" 
-                    required={true}
-                    value={name}
+                    required
+                    value={nome}
                     setInputValue={value => setName(value)}
                 />
                 <CampoTexto 
                     label="Cargo"
                     placeholder="Digite seu cargo" 
-                    required={true}
-                    value={role}
+                    required
+                    value={cargo}
                     setInputValue={value => setRole(value)}
                 />
                 <CampoTexto 
                     label="Imagem" 
                     placeholder="Digite o endereço da imagem"
-                    value={image}
+                    value={imagem}
                     setInputValue={value => setImage(value)}
                 />
                 <ListaSuspensa 
                     label= "Time" 
-                    items={props.squad} 
-                    required={true}
-                    value={team} 
+                    items={form.squad} 
+                    required
+                    value={time} 
                     setInputValue={value => setTeam(value)}
                 />
                 <Botao>
                     Adicionar card
+                </Botao>
+            </form>
+            <form onSubmit={registerNewTeam}>
+                <h2>Preencha os dados para criar uma sessão de um novo time</h2>
+                <CampoTexto 
+                    label="Nome do Time" 
+                    placeholder="Digite o nome do novo time" 
+                    required
+                    value={timeName}
+                    setInputValue={value => setTimeName(value)}
+                />
+                <CampoTexto 
+                    label="Cor do time"
+                    placeholder="Digite a cor do time" 
+                    required
+                    value={timeColor}
+                    setInputValue={value => setTimeColor(value)}
+                />
+                <Botao>
+                    Adicionar time
                 </Botao>
             </form>
         </section>

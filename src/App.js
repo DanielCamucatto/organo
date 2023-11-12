@@ -220,6 +220,34 @@ function App() {
       imagem: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
       time: teams[5].name
     },
+    {
+      id: uuidv4(),
+      nome: 'JULIANA AMOASEI',
+      cargo: 'Desenvolvedora de software e instrutora',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
+      time: teams[6].name
+    },
+    {
+      id: uuidv4(),
+      nome: 'DANIEL ARTINE',
+      cargo: 'Engenheiro de Software na Stone Age',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
+      time: teams[6].name
+    },
+    {
+      id: uuidv4(),
+      nome: 'GUILHERME LIMA',
+      cargo: 'Desenvolvedor Python e JavaScript na Alura',
+      imagem: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
+      time: teams[6].name
+    },
+    {
+      id: uuidv4(),
+      nome: 'PAULO SILVEIRA',
+      cargo: 'Hipster e CEO da Alura',
+      imagem: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
+      time: teams[6].name
+    },
   ];
 
 
@@ -232,7 +260,6 @@ function App() {
   const handleDeleteEmployee = (employeeToDelete) => {
     const updateEmployees = employees.filter(employee => employee.id !== employeeToDelete.id )
     setEmployees(updateEmployees)
-    console.log('deletado', employeeToDelete);
   }
 
   const handleChangeColorTeams = (color, id) => {
@@ -244,10 +271,18 @@ function App() {
     }))
   }
 
+ const handleResgisterNewTeams = (newTeams) => {
+    setTeams([...teams, {...newTeams, id: uuidv4()}]);
+ }
+
   return (
     <div className="App">
       <Banner />
-      <Formulario squad={teams.map(squad => squad.name)} handleResgisteredEmployee={employee => handleNewEmployee(employee)} />
+      <Formulario 
+        squad={teams.map(squad => squad.name)} 
+        handleResgisteredEmployee={employee => handleNewEmployee(employee)} 
+        handleResgisterNewTeams={ teams => handleResgisterNewTeams(teams)}
+      />
       <section className="times">
         <h1>Minha organização</h1>
         {teams.map((team, index) => 
@@ -255,7 +290,7 @@ function App() {
             changeColor={handleChangeColorTeams}
             key={index} 
             time={team} 
-            employees={employees.filter(employee => employee.time === team.name)} 
+            employees={employees.filter(employee => employee.time === team.name )} 
             handleDeleteEmployee={handleDeleteEmployee}
           />
         )}

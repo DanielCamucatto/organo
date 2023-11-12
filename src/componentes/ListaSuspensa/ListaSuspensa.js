@@ -15,8 +15,8 @@ const ListaSuspensa = (props) => {
                 onChange={setSelectChange}
             >
                 <option value=''></option>
-                {props.items.map((item) => {
-                    return <option key={item}>{item}</option>
+                {props.items.map((item, index) => {
+                    return <option key={index}>{item}</option>
                 })}
             </select>
         </div>
