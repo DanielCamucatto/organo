@@ -74,7 +74,7 @@ const Formulario = (form) => {
                 </Botao>
             </form>
             <form onSubmit={registerNewTeam}>
-                <h2>Preencha os dados para criar uma sessão de um novo time</h2>
+                <h2>Preencha os dados para criar um novo time</h2>
                 <CampoTexto 
                     label="Nome do Time" 
                     placeholder="Digite o nome do novo time" 
@@ -83,6 +83,7 @@ const Formulario = (form) => {
                     setInputValue={value => setTimeName(value)}
                 />
                 <CampoTexto 
+                    type='color'
                     label="Cor do time"
                     placeholder="Digite a cor do time" 
                     required

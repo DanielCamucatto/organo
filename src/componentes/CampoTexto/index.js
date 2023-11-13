@@ -1,6 +1,6 @@
 import './CampoTexto.css'
 
-const CampoTexto = ({label, placeholder, setInputValue, required, value }) => {
+const CampoTexto = ({type = 'text',label, placeholder, setInputValue, required, value }) => {
 
     const placeholderModificada = `${placeholder}...` 
 
@@ -10,11 +10,13 @@ const CampoTexto = ({label, placeholder, setInputValue, required, value }) => {
     }
 
     return (
-        <div className="campo-texto">
+        <div className="campo-texto campo-color ">
             <label>
                 {label}
             </label>
             <input 
+                className='color'
+                type={type}
                 placeholder={placeholderModificada} 
                 required={required}
                 value={value}
