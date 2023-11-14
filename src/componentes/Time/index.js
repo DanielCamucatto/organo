@@ -12,6 +12,7 @@ const Time = ({time, employees, handleDeleteEmployee, changeColor}) => {
                 {employees.map((colaborador, index) => 
                     <Colaborador 
                         key={index}
+                        id={colaborador.id}
                         name={colaborador.nome} 
                         role={colaborador.cargo} 
                         image={colaborador.imagem} 
