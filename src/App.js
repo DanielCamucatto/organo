@@ -53,6 +53,7 @@ function App() {
 
   const inicial = [
     {
+      like: false,
       id: uuidv4(),
       nome: 'JULIANA AMOASEI',
       cargo: 'Desenvolvedora de software e instrutora',
@@ -60,6 +61,7 @@ function App() {
       time: teams[0].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'DANIEL ARTINE',
       cargo: 'Engenheiro de Software na Stone Age',
@@ -67,6 +69,7 @@ function App() {
       time: teams[0].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'GUILHERME LIMA',
       cargo: 'Desenvolvedor Python e JavaScript na Alura',
@@ -74,6 +77,7 @@ function App() {
       time: teams[0].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'PAULO SILVEIRA',
       cargo: 'Hipster e CEO da Alura',
@@ -81,6 +85,7 @@ function App() {
       time: teams[0].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'JULIANA AMOASEI',
       cargo: 'Desenvolvedora de software e instrutora',
@@ -88,6 +93,7 @@ function App() {
       time: teams[1].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'DANIEL ARTINE',
       cargo: 'Engenheiro de Software na Stone Age',
@@ -95,6 +101,7 @@ function App() {
       time: teams[1].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'GUILHERME LIMA',
       cargo: 'Desenvolvedor Python e JavaScript na Alura',
@@ -102,6 +109,7 @@ function App() {
       time: teams[1].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'PAULO SILVEIRA',
       cargo: 'Hipster e CEO da Alura',
@@ -109,6 +117,7 @@ function App() {
       time: teams[1].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'JULIANA AMOASEI',
       cargo: 'Desenvolvedora de software e instrutora',
@@ -116,6 +125,7 @@ function App() {
       time: teams[2].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'DANIEL ARTINE',
       cargo: 'Engenheiro de Software na Stone Age',
@@ -123,6 +133,7 @@ function App() {
       time: teams[2].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'GUILHERME LIMA',
       cargo: 'Desenvolvedor Python e JavaScript na Alura',
@@ -130,6 +141,7 @@ function App() {
       time: teams[2].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'PAULO SILVEIRA',
       cargo: 'Hipster e CEO da Alura',
@@ -137,6 +149,7 @@ function App() {
       time: teams[2].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'JULIANA AMOASEI',
       cargo: 'Desenvolvedora de software e instrutora',
@@ -144,6 +157,7 @@ function App() {
       time: teams[3].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'DANIEL ARTINE',
       cargo: 'Engenheiro de Software na Stone Age',
@@ -151,6 +165,7 @@ function App() {
       time: teams[3].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'GUILHERME LIMA',
       cargo: 'Desenvolvedor Python e JavaScript na Alura',
@@ -158,6 +173,7 @@ function App() {
       time: teams[3].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'PAULO SILVEIRA',
       cargo: 'Hipster e CEO da Alura',
@@ -165,6 +181,7 @@ function App() {
       time: teams[3].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'JULIANA AMOASEI',
       cargo: 'Desenvolvedora de software e instrutora',
@@ -172,6 +189,7 @@ function App() {
       time: teams[4].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'DANIEL ARTINE',
       cargo: 'Engenheiro de Software na Stone Age',
@@ -179,6 +197,7 @@ function App() {
       time: teams[4].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'GUILHERME LIMA',
       cargo: 'Desenvolvedor Python e JavaScript na Alura',
@@ -186,6 +205,7 @@ function App() {
       time: teams[4].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'PAULO SILVEIRA',
       cargo: 'Hipster e CEO da Alura',
@@ -193,6 +213,7 @@ function App() {
       time: teams[4].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'JULIANA AMOASEI',
       cargo: 'Desenvolvedora de software e instrutora',
@@ -200,6 +221,7 @@ function App() {
       time: teams[5].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'DANIEL ARTINE',
       cargo: 'Engenheiro de Software na Stone Age',
@@ -207,6 +229,7 @@ function App() {
       time: teams[5].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'GUILHERME LIMA',
       cargo: 'Desenvolvedor Python e JavaScript na Alura',
@@ -214,6 +237,7 @@ function App() {
       time: teams[5].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'PAULO SILVEIRA',
       cargo: 'Hipster e CEO da Alura',
@@ -221,6 +245,7 @@ function App() {
       time: teams[5].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'JULIANA AMOASEI',
       cargo: 'Desenvolvedora de software e instrutora',
@@ -228,6 +253,7 @@ function App() {
       time: teams[6].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'DANIEL ARTINE',
       cargo: 'Engenheiro de Software na Stone Age',
@@ -235,6 +261,7 @@ function App() {
       time: teams[6].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'GUILHERME LIMA',
       cargo: 'Desenvolvedor Python e JavaScript na Alura',
@@ -242,6 +269,7 @@ function App() {
       time: teams[6].name
     },
     {
+      like: false,
       id: uuidv4(),
       nome: 'PAULO SILVEIRA',
       cargo: 'Hipster e CEO da Alura',
