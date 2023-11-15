@@ -11,7 +11,7 @@ const Formulario = (form) => {
     const [imagem, setImage] = useState(''); 
     const [time, setTeam] = useState('');
     const [timeName, setTimeName] = useState(''); 
-    const [timeColor, setTimeColor] = useState('');
+    const [timeColor, setTimeColor] = useState('#000000');
 
     const handleSubmit = (ev) => {
         ev.preventDefault();

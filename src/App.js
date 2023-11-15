@@ -299,9 +299,19 @@ function App() {
     }))
   }
 
- const handleResgisterNewTeams = (newTeams) => {
+  const handleResgisterNewTeams = (newTeams) => {
     setTeams([...teams, {...newTeams, id: uuidv4()}]);
- }
+  }
+
+  const buttonLike = (id) => {
+    // console.log('colaborador', employees)
+    setEmployees(employees.map(colaborador => {
+      if(colaborador.id === id){
+        colaborador.like = !colaborador.like
+      }
+      return colaborador
+    }));
+  }
 
   return (
     <div className="App">
@@ -315,6 +325,7 @@ function App() {
         <h1>Minha organização</h1>
         {teams.map((team, index) => 
           <Time 
+            handleLike={buttonLike}
             changeColor={handleChangeColorTeams}
             key={index} 
             time={team} 
