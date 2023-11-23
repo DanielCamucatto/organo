@@ -1,10 +1,20 @@
 import './CampoTexto.css'
 
-const CampoTexto = ({type = 'text',label, placeholder, setInputValue, required, value }) => {
+type CampoTextoProps ={
+    label: string
+    placeholder: string
+    required: boolean
+    value: string
+    type: string
+    setInputValue: (value: string) => void
+}
+
+
+const CampoTexto = ({type = 'text',label, placeholder, setInputValue, required, value }: CampoTextoProps) => {
 
     const placeholderModificada = `${placeholder}...` 
 
-    const handleChange = (ev) => {
+    const handleChange = (ev: React.ChangeEvent<HTMLInputElement>) => {
        const inputValue = ev.target.value;
        setInputValue(inputValue);
     }
