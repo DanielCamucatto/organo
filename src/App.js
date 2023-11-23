@@ -315,7 +315,7 @@ function App() {
 
   return (
     <div className="App">
-      <Banner />
+      <Banner src='/imagens/banner.png' alt='O banner principal da página do Organo'/>
       <Formulario 
         squad={teams.map(squad => squad.name)} 
         handleResgisteredEmployee={employee => handleNewEmployee(employee)} 
