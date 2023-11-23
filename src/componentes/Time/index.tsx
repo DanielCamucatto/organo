@@ -1,8 +1,18 @@
-import Colaborador from '../Colaborador';
+import Colaborador from '../Colaborador'
 import hexToRgba from 'hex-to-rgba';
 import './team.css'; 
+import { ITime } from '../../shared/interfaces/Itime';
+import { IEmployess } from '../../shared/interfaces/IEmployees';
 
-const Time = ({time, employees, handleDeleteEmployee, changeColor, handleLike}) => {
+type timeProps = {
+    time: ITime
+    employees: IEmployess[]
+    handleLike: (id: string) => void
+    handleDeleteEmployee: (id: string) => void
+    changeColor: (color: string, timeId: string) => void
+}
+
+const Time = ({time, employees, handleDeleteEmployee, changeColor, handleLike}: timeProps) => {
     return (
         (employees.length > 0) &&
         <section className='time' style={{ backgroundColor: time.color ? hexToRgba(time.color, '0.6') : 'transparent' }}>
@@ -18,7 +28,7 @@ const Time = ({time, employees, handleDeleteEmployee, changeColor, handleLike}) 
                         role={colaborador.cargo} 
                         image={colaborador.imagem} 
                         mainColor={time.color} 
-                        handleDeleteEmployee={() => handleDeleteEmployee(colaborador)} 
+                        handleDeleteEmployee={() => handleDeleteEmployee(colaborador.id)} 
                         handleLike={handleLike}
                     />
                 )}

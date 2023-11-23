@@ -1,8 +1,18 @@
 import {AiFillCloseCircle,AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
 import './colaborador.css'; 
 
-const Colaborador = ({image,name, role, mainColor, handleDeleteEmployee, handleLike, id, like}) => {
-    // console.log(handleLike)
+type ColaboradorProps = {
+    image: string
+    name: string
+    role: string
+    mainColor: string
+    id: string
+    like: boolean
+    handleLike: (value: string) => void 
+    handleDeleteEmployee: () => void
+}
+
+const Colaborador = ({image,name, role, mainColor, handleDeleteEmployee, handleLike, id, like}: ColaboradorProps) => {
     function changeLike(){
         handleLike(id)
     }    
@@ -15,7 +25,7 @@ const Colaborador = ({image,name, role, mainColor, handleDeleteEmployee, handleL
 
     return(
         <div className='colaborador'>
-            <AiFillCloseCircle size={25} className='delete'onClick={handleDeleteEmployee} />
+            <AiFillCloseCircle size={25} className='delete' onClick={handleDeleteEmployee} />
             <div className='cabecalho' style={{backgroundColor: mainColor}}>
                 <img src={image} alt={name} />
             </div>

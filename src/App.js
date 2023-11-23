@@ -304,7 +304,6 @@ function App() {
   }
 
   const buttonLike = (id) => {
-    // console.log('colaborador', employees)
     setEmployees(employees.map(colaborador => {
       if(colaborador.id === id){
         colaborador.like = !colaborador.like
