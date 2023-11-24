@@ -1,3 +1,4 @@
+import React from 'react';
 import Colaborador from '../Colaborador'
 import hexToRgba from 'hex-to-rgba';
 import './team.css'; 

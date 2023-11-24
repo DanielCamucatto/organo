@@ -1,10 +1,11 @@
+import React from 'react'
 import { useState } from 'react'
 import Botao from '../Botao'
 import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa/ListaSuspensa'
 import './Formulario.css'
-import { IRegisterEmployee } from '../../shared/interfaces/IEmployees'
-import { INewTime } from '../../shared/interfaces/Itime'
+import { IRegisterEmployee } from '../../shared/interfaces/IRegisterEmployee'
+import { INewTime } from '../../shared/interfaces/INewTime'
 
 type FormProps = {
     squad: string[]

@@ -3,8 +3,3 @@ export interface ITime {
     id: string
     name:string
 }
-
-export interface INewTime {
-    name: string
-    color: string
-}

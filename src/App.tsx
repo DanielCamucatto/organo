@@ -1,9 +1,12 @@
+import React from 'react';
 import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
-import Rodape from './componentes/Rodape';
+import Rodape from './componentes/Rodape'
 import {v4 as uuidv4} from 'uuid'
+import { IEmployess } from './shared/interfaces/IEmployees';
+import { INewTime } from './shared/interfaces/INewTime';
 
 function App() {
   const [teams, setTeams] = useState([
@@ -279,18 +282,19 @@ function App() {
   ];
 
 
-  const [employees, setEmployees] = useState(inicial);
+  const [employees, setEmployees] = useState<IEmployess[]>(inicial);
 
-  const handleNewEmployee = (employee) => {
+  const handleNewEmployee = (employee: IEmployess) => {
     setEmployees([...employees, employee])
   }
 
-  const handleDeleteEmployee = (employeeToDelete) => {
+  const handleDeleteEmployee = (employeeToDelete: { id: string; }) => {
+
     const updateEmployees = employees.filter(employee => employee.id !== employeeToDelete.id )
     setEmployees(updateEmployees)
   }
 
-  const handleChangeColorTeams = (color, id) => {
+  const handleChangeColorTeams = (color: string, id: string) => {
     setTeams(teams.map(time => {
       if(time.id === id){
         time.color = color
@@ -299,11 +303,11 @@ function App() {
     }))
   }
 
-  const handleResgisterNewTeams = (newTeams) => {
+  const handleResgisterNewTeams = (newTeams: INewTime) => {
     setTeams([...teams, {...newTeams, id: uuidv4()}]);
   }
 
-  const buttonLike = (id) => {
+  const buttonLike = (id: string) => {
     setEmployees(employees.map(colaborador => {
       if(colaborador.id === id){
         colaborador.like = !colaborador.like
@@ -329,7 +333,7 @@ function App() {
             key={index} 
             time={team} 
             employees={employees.filter(employee => employee.time === team.name )} 
-            handleDeleteEmployee={handleDeleteEmployee}
+            handleDeleteEmployee={(id) => handleDeleteEmployee({id})}
           />
         )}
       </section>

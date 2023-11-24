@@ -1,3 +1,4 @@
+import React from 'react';
 import {AiFillCloseCircle,AiFillHeart, AiOutlineHeart } from 'react-icons/ai'
 import './colaborador.css'; 
 
