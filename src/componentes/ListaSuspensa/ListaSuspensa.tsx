@@ -5,7 +5,7 @@ type ListaSuspensaProps = {
     value: string
     required: boolean
     items: string[]
-    setInputValue: (value: string) => string
+    setInputValue: (value: string) => void
 }
 
 const ListaSuspensa = ({label, value, required, items, setInputValue}: ListaSuspensaProps) => {

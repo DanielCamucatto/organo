@@ -3,8 +3,16 @@ import Botao from '../Botao'
 import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa/ListaSuspensa'
 import './Formulario.css'
+import { IRegisterEmployee } from '../../shared/interfaces/IEmployees'
+import { INewTime } from '../../shared/interfaces/Itime'
 
-const Formulario = (form) => {
+type FormProps = {
+    squad: string[]
+    handleResgisteredEmployee: (newResgisterEmployee: IRegisterEmployee) => void
+    handleResgisterNewTeams: (newTimeRegister: INewTime) => void
+}
+
+const Formulario = (form: FormProps) => {
 
     const [nome, setName] = useState(''); 
     const [cargo, setRole] = useState('');
@@ -13,7 +21,7 @@ const Formulario = (form) => {
     const [timeName, setTimeName] = useState(''); 
     const [timeColor, setTimeColor] = useState('#000000');
 
-    const handleSubmit = (ev) => {
+    const handleSubmit = (ev: React.FormEvent<HTMLFormElement>) => {
         ev.preventDefault();
         form.handleResgisteredEmployee({
             nome, 
@@ -29,7 +37,7 @@ const Formulario = (form) => {
         setTeam('');
     }
 
-    const registerNewTeam = (ev) => {
+    const registerNewTeam = (ev: React.FormEvent<HTMLFormElement>) => {
         ev.preventDefault()
         form.handleResgisterNewTeams({name: timeName, color:timeColor});
 

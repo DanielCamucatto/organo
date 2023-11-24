@@ -3,14 +3,14 @@ import './CampoTexto.css'
 type CampoTextoProps ={
     label: string
     placeholder: string
-    required: boolean
+    required?: boolean
     value: string
-    type: string
+    type?: string
     setInputValue: (value: string) => void
 }
 
 
-const CampoTexto = ({type = 'text',label, placeholder, setInputValue, required, value }: CampoTextoProps) => {
+const CampoTexto = ({type = 'text',label, placeholder, setInputValue, required = false, value }: CampoTextoProps) => {
 
     const placeholderModificada = `${placeholder}...` 
 

@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import './botao.css';
 
 type botaoProps = {
-    children: ReactElement
+    children: ReactElement | string
 }
 
 const Botao = (button: botaoProps) => {
