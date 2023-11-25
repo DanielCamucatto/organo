@@ -23,13 +23,13 @@ const Time = ({time, employees, handleDeleteEmployee, changeColor, handleLike}: 
                 {employees.map((colaborador, index) => 
                     <Colaborador 
                         key={index}
-                        like={colaborador.like}
-                        id={colaborador.id}
+                        like={colaborador.like as boolean}
+                        id={colaborador.id as string}
                         name={colaborador.nome} 
                         role={colaborador.cargo} 
                         image={colaborador.imagem} 
                         mainColor={time.color} 
-                        handleDeleteEmployee={() => handleDeleteEmployee(colaborador.id)} 
+                        handleDeleteEmployee={() => handleDeleteEmployee(colaborador.id as string)} 
                         handleLike={handleLike}
                     />
                 )}

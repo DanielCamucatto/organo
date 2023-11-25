@@ -4,12 +4,13 @@ import Botao from '../Botao'
 import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa/ListaSuspensa'
 import './Formulario.css'
-import { IRegisterEmployee } from '../../shared/interfaces/IRegisterEmployee'
+// import { IRegisterEmployee } from '../../shared/interfaces/IRegisterEmployee'
 import { INewTime } from '../../shared/interfaces/INewTime'
+import { IEmployess } from '../../shared/interfaces/IEmployees'
 
 type FormProps = {
     squad: string[]
-    handleResgisteredEmployee: (newResgisterEmployee: IRegisterEmployee) => void
+    handleResgisteredEmployee: (newResgisterEmployee: IEmployess) => void
     handleResgisterNewTeams: (newTimeRegister: INewTime) => void
 }
 
